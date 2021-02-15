@@ -57,12 +57,12 @@ def gen():
     return mot
 
 
-def prob(word):
+def prob(pro, word):
     pre = "%"*LEN_PRE
     p = 1
     for i in word+"\n":
-        if i in p:
-            p*=l[pre][i]
+        if i in pro[pre]:
+            p*=pro[pre][i]
         else:
             return 0
         pre = pre[1:]+i
